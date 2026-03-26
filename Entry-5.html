@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entry 1 - Summer Updates</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+  <a class="nav-logo" href="index.html">✦ My Portfolio</a>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="Entry-1.html">Entry 1</a>
+    <a href="Entry-2.html">Entry 2</a>
+    <a href="Entry-3.html">Entry 3</a>
+    <a href="Entry-4.html">Entry 4</a>
+    <a href="Entry-5.html"class="active">Entry 5</a>
+    <a href="Entry-6.html">Entry 6</a>
+  </div>
+</nav>
+
+  <div class="entry-page">
+    <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+    <div class="entry-label">Entry #5</div>
+    <h1 class="entry-title">Best Music of 2025</h1>
+    <p class="entry-subtitle">I explored Pitchfork's Best 50 Albums of 2025 and listened to 5 albums I had never heard before.</p>
+    <hr class="divider"/>
+
+    <div class="content-block">
+      <h3>🎧 Albums I Listened To</h3>
+      <p>Here are the 5 albums I chose from the list and had never heard before:</p>
+    </div>
+
+    <div class="album-grid">
+      <div class="album-card">
+        <div class="album-art">🎸</div>
+        <div class="album-info">
+          <div class="album-name">Album Title</div>
+          <div class="album-artist">Artist Name</div>
+        </div>
+      </div>
+      <div class="album-card">
+        <div class="album-art">🎹</div>
+        <div class="album-info">
+          <div class="album-name">Album Title</div>
+          <div class="album-artist">Artist Name</div>
+        </div>
+      </div>
+      <div class="album-card">
+        <div class="album-art">🎤</div>
+        <div class="album-info">
+          <div class="album-name">Album Title</div>
+          <div class="album-artist">Artist Name</div>
+        </div>
+      </div>
+      <div class="album-card">
+        <div class="album-art">🥁</div>
+        <div class="album-info">
+          <div class="album-name">Album Title</div>
+          <div class="album-artist">Artist Name</div>
+        </div>
+      </div>
+      <div class="album-card">
+        <div class="album-art">🎷</div>
+        <div class="album-info">
+          <div class="album-name">Album Title</div>
+          <div class="album-artist">Artist Name</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider"/>
+
+    <div class="qa-item">
+      <div class="qa-question">Have you heard any albums from Pitchfork's list before? What did you think?</div>
+      <div class="qa-answer">Write your answer here. Did you already know any of the albums? What did you think of them when you first heard them?</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-question">Which album from the list did you like the most? Why?</div>
+      <div class="qa-answer">Write your answer here. Explain what you liked about the music — the sound, the lyrics, the mood?</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-question">Are there any 2025 albums NOT on the list that you think should be?</div>
+      <div class="qa-answer">Write your answer here. Were there any albums from 2025 you loved that didn't make Pitchfork's list?</div>
+    </div>
+
+    <hr class="divider"/>
+
+    <div class="content-block">
+      <h3>⭐ Best Things of 2025 (for me personally)</h3>
+      <ul>
+        <li>Write your first best thing of 2025 here — could be a personal moment, something in the news, anything!</li>
+        <li>Write your second best thing of 2025 here.</li>
+        <li>Write your third best thing of 2025 here.</li>
+        <li>Write your fourth best thing of 2025 here (optional).</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<footer>My Portfolio · <span id="year"></span></footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    const navEl = document.getElementById('nav-' + id);
+    if (navEl) navEl.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>

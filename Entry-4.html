@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entry 1 - Summer Updates</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+  <a class="nav-logo" href="index.html">✦ My Portfolio</a>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="Entry-1.html">Entry 1</a>
+    <a href="Entry-2.html">Entry 2</a>
+    <a href="Entry-3.html">Entry 3</a>
+    <a href="Entry-4.html"class="active">Entry 4</a>
+    <a href="Entry-5.html">Entry 5</a>
+    <a href="Entry-6.html">Entry 6</a>
+  </div>
+</nav>
+
+  <div class="entry-page">
+    <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+    <div class="entry-label">Entry #4</div>
+    <h1 class="entry-title strikethrough">Story Writing</h1>
+    <div class="cancelled-badge">⊘ Cancelled by teacher</div>
+
+    <div class="cancelled-note">
+      <div class="big">📋</div>
+      <p>This entry (Story Writing) was <strong style="color:var(--text)">cancelled</strong> by the teacher and does not need to be completed.</p>
+    </div>
+  </div>
+</div>
+<footer>My Portfolio · <span id="year"></span></footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    const navEl = document.getElementById('nav-' + id);
+    if (navEl) navEl.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>

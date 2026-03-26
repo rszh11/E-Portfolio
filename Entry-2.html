@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entry 1 - Summer Updates</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+  <a class="nav-logo" href="index.html">✦ My Portfolio</a>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="Entry-1.html">Entry 1</a>
+    <a href="Entry-2.html"class="active">Entry 2</a>
+    <a href="Entry-3.html">Entry 3</a>
+    <a href="Entry-4.html">Entry 4</a>
+    <a href="Entry-5.html">Entry 5</a>
+    <a href="Entry-6.html">Entry 6</a>
+  </div>
+</nav>
+
+  <div class="entry-page">
+    <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+    <div class="entry-label">Entry #2</div>
+    <h1 class="entry-title">Research Task</h1>
+    <p class="entry-subtitle">I chose to research <strong style="color:var(--text)">English Idioms</strong> — their origins and how people use them today.</p>
+    <hr class="divider"/>
+
+    <!-- CHANGE THIS SECTION to whichever topic you chose -->
+    <!-- Option shown: English Idioms (Option 2) -->
+
+    <div class="content-block">
+      <h3>🗣️ What Are Idioms?</h3>
+      <p>An idiom is a phrase whose meaning cannot be understood from the literal meaning of the individual words. They are a colourful and important part of everyday English conversation.</p>
+      <p>I chose 4 idioms to research, looking at where they come from and how native English speakers use them today.</p>
+    </div>
+
+    <!-- IDIOM 1 -->
+    <div class="content-block">
+      <h3>1. "Kick the Bucket"</h3>
+      <p><span class="tag">Meaning: to die</span></p>
+      <p><strong style="color:var(--text)">Origin:</strong> One theory links it to the old English word "bucket" (a wooden yoke used in slaughterhouses), where animals would kick the yoke as they died. Another theory comes from suicide by hanging, where a person stood on a bucket that was then kicked away.</p>
+      <p><strong style="color:var(--text)">Used today:</strong> Usually in a humorous or casual context. For example: <em>"He kicked the bucket at age 95 after a long, happy life."</em></p>
+    </div>
+
+    <!-- IDIOM 2 -->
+    <div class="content-block">
+      <h3>2. "Break the Ice"</h3>
+      <p><span class="tag">Meaning: to ease tension in a social situation</span></p>
+      <p><strong style="color:var(--text)">Origin:</strong> Before railways, small boats called "ice breakers" were sent ahead of trade ships to break up the ice so trade could continue. "Breaking the ice" meant clearing the path for something to happen.</p>
+      <p><strong style="color:var(--text)">Used today:</strong> Very common in social and business settings. <em>"The teacher played a fun game to break the ice on the first day of school."</em></p>
+    </div>
+
+    <!-- IDIOM 3 -->
+    <div class="content-block">
+      <h3>3. "Bite the Bullet"</h3>
+      <p><span class="tag">Meaning: to endure a painful situation</span></p>
+      <p><strong style="color:var(--text)">Origin:</strong> Before modern anaesthesia, soldiers undergoing surgery on the battlefield were sometimes given a bullet to bite down on to help them endure the pain.</p>
+      <p><strong style="color:var(--text)">Used today:</strong> People use it to encourage someone to get through something difficult. <em>"I didn't want to go to the dentist, but I bit the bullet and made the appointment."</em></p>
+    </div>
+
+    <!-- IDIOM 4 -->
+    <div class="content-block">
+      <h3>4. "Under the Weather"</h3>
+      <p><span class="tag">Meaning: to feel ill or unwell</span></p>
+      <p><strong style="color:var(--text)">Origin:</strong> Thought to come from sailing. When a sailor felt sick, they were sent below deck — literally "under the weather" (the weather being on the deck above). The shelter below helped them recover.</p>
+      <p><strong style="color:var(--text)">Used today:</strong> One of the most common English idioms. <em>"I can't come to school today — I'm feeling a bit under the weather."</em></p>
+    </div>
+
+    <div class="content-block">
+      <h3>📝 My Reflection</h3>
+      <p>What I found most interesting was how many idioms come from a historical or physical origin that has completely disappeared from modern life — yet the phrases live on. Idioms make English more vivid and expressive, and learning them helps me understand native speakers much better.</p>
+    </div>
+  </div>
+</div>
+<footer>My Portfolio · <span id="year"></span></footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    const navEl = document.getElementById('nav-' + id);
+    if (navEl) navEl.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>

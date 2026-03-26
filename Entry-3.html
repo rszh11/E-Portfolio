@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entry 1 - Summer Updates</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+  <a class="nav-logo" href="index.html">✦ My Portfolio</a>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="Entry-1.html">Entry 1</a>
+    <a href="Entry-2.html">Entry 2</a>
+    <a href="Entry-3.html"class="active">Entry 3</a>
+    <a href="Entry-4.html">Entry 4</a>
+    <a href="Entry-5.html">Entry 5</a>
+    <a href="Entry-6.html">Entry 6</a>
+  </div>
+</nav>
+
+  <div class="entry-page">
+    <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+    <div class="entry-label">Entry #3</div>
+    <h1 class="entry-title">Airfare Interview</h1>
+    <p class="entry-subtitle">I interviewed my classmate <strong style="color:var(--text)">[Partner's Name]</strong> using the questions from page 27, question 3.</p>
+    <hr class="divider"/>
+
+    <div class="content-block" style="margin-bottom:24px">
+      <h3>About My Partner</h3>
+      <p>Write a short introduction about your interview partner here — their name, and maybe one interesting thing you learned about them from the interview.</p>
+    </div>
+
+    <div class="interview-grid">
+      <div class="interview-item">
+        <div class="q">Where did you go on your last holiday?</div>
+        <div class="a">Write your partner's answer here. Add as much detail as they gave you.</div>
+      </div>
+      <div class="interview-item">
+        <div class="q">What was your favourite part of the trip?</div>
+        <div class="a">Write your partner's answer here.</div>
+      </div>
+      <div class="interview-item">
+        <div class="q">Did anything go wrong on the trip?</div>
+        <div class="a">Write your partner's answer here.</div>
+      </div>
+      <div class="interview-item">
+        <div class="q">What is your dream holiday destination?</div>
+        <div class="a">Write your partner's answer here.</div>
+      </div>
+      <div class="interview-item">
+        <div class="q">Do you prefer city breaks or nature holidays?</div>
+        <div class="a">Write your partner's answer here.</div>
+      </div>
+      <div class="interview-item">
+        <div class="q">How do you usually get to your holiday destination?</div>
+        <div class="a">Write your partner's answer here.</div>
+      </div>
+    </div>
+
+    <div class="content-block" style="margin-top:24px">
+      <h3>💬 My Reflection</h3>
+      <p>Write a short paragraph about what you found interesting in the interview, what surprised you, or what you have in common with your partner.</p>
+    </div>
+  </div>
+</div>
+<footer>My Portfolio · <span id="year"></span></footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    const navEl = document.getElementById('nav-' + id);
+    if (navEl) navEl.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!-- ===== ENTRY 1 ===== -->
+<div id="entry1" class="page">
+  <div class="entry-page">
+    <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+    <div class="entry-label">Entry #1</div>
+    <h1 class="entry-title">Summer Updates</h1>
+    <p class="entry-subtitle">Three highlights from my summer, plus one lowlight — and how I dealt with it.</p>
+    <hr class="divider"/>
+
+    <h2 style="font-family:'Playfair Display',serif; font-size:1.3rem; margin-bottom:16px; color:var(--accent)">✦ Three Highlights</h2>
+
+    <div class="highlight-grid">
+      <div class="highlight-card">
+        <div class="highlight-img-placeholder">
+          <span>🏖️</span>
+          <div>Add your photo here</div>
+        </div>
+        <div class="highlight-body">
+          <div class="highlight-num">Highlight 1</div>
+          <div class="highlight-title">Your Title Here</div>
+          <div class="highlight-text">Write about your first highlight here. What happened? Why was it special? How did it make you feel?</div>
+        </div>
+      </div>
+
+      <div class="highlight-card">
+        <div class="highlight-img-placeholder">
+          <span>🎉</span>
+          <div>Add your photo here</div>
+        </div>
+        <div class="highlight-body">
+          <div class="highlight-num">Highlight 2</div>
+          <div class="highlight-title">Your Title Here</div>
+          <div class="highlight-text">Write about your second highlight here. Describe where you were, who you were with, and what made it memorable.</div>
+        </div>
+      </div>
+
+      <div class="highlight-card">
+        <div class="highlight-img-placeholder">
+          <span>🌄</span>
+          <div>Add your photo here</div>
+        </div>
+        <div class="highlight-body">
+          <div class="highlight-num">Highlight 3</div>
+          <div class="highlight-title">Your Title Here</div>
+          <div class="highlight-text">Write about your third highlight here. What did you learn or take away from this experience?</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider"/>
+
+    <h2 style="font-family:'Playfair Display',serif; font-size:1.3rem; margin-bottom:16px; color:var(--accent2)">✦ One Lowlight</h2>
+
+    <div class="lowlight-box">
+      <div class="label">Lowlight</div>
+      <h3>Your Lowlight Title Here</h3>
+      <p>Describe your summer lowlight here. What went wrong? How did it affect you? Be honest — this is your personal reflection. You don't need to share anything too private, just something that wasn't ideal about your summer.</p>
+    </div>
+
+    <div class="solution-box">
+      <div class="solution-icon">💡</div>
+      <div>
+        <strong>My Solution</strong>
+        <p>Explain how you dealt with this lowlight, or what you would do differently next time. What did you learn from the experience?</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== ENTRY 2 ===== -->
+<div id="entry2" class="page">
+  <div class="entry-page">
+    <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+    <div class="entry-label">Entry #2</div>
+    <h1 class="entry-title">Research Task</h1>
+    <p class="entry-subtitle">I chose to research <strong style="color:var(--text)">English Idioms</strong> — their origins and how people use them today.</p>
+    <hr class="divider"/>
+
+    <!-- CHANGE THIS SECTION to whichever topic you chose -->
+    <!-- Option shown: English Idioms (Option 2) -->
+
+    <div class="content-block">
+      <h3>🗣️ What Are Idioms?</h3>
+      <p>An idiom is a phrase whose meaning cannot be understood from the literal meaning of the individual words. They are a colourful and important part of everyday English conversation.</p>
+      <p>I chose 4 idioms to research, looking at where they come from and how native English speakers use them today.</p>
+    </div>
+
+    <!-- IDIOM 1 -->
+    <div class="content-block">
+      <h3>1. "Kick the Bucket"</h3>
+      <p><span class="tag">Meaning: to die</span></p>
+      <p><strong style="color:var(--text)">Origin:</strong> One theory links it to the old English word "bucket" (a wooden yoke used in slaughterhouses), where animals would kick the yoke as they died. Another theory comes from suicide by hanging, where a person stood on a bucket that was then kicked away.</p>
+      <p><strong style="color:var(--text)">Used today:</strong> Usually in a humorous or casual context. For example: <em>"He kicked the bucket at age 95 after a long, happy life."</em></p>
+    </div>
+
+    <!-- IDIOM 2 -->
+    <div class="content-block">
+      <h3>2. "Break the Ice"</h3>
+      <p><span class="tag">Meaning: to ease tension in a social situation</span></p>
+      <p><strong style="color:var(--text)">Origin:</strong> Before railways, small boats called "ice breakers" were sent ahead of trade ships to break up the ice so trade could continue. "Breaking the ice" meant clearing the path for something to happen.</p>
+      <p><strong style="color:var(--text)">Used today:</strong> Very common in social and business settings. <em>"The teacher played a fun game to break the ice on the first day of school."</em></p>
+    </div>
+
+    <!-- IDIOM 3 -->
+    <div class="content-block">
+      <h3>3. "Bite the Bullet"</h3>
+      <p><span class="tag">Meaning: to endure a painful situation</span></p>
+      <p><strong style="color:var(--text)">Origin:</strong> Before modern anaesthesia, soldiers undergoing surgery on the battlefield were sometimes given a bullet to bite down on to help them endure the pain.</p>
+      <p><strong style="color:var(--text)">Used today:</strong> People use it to encourage someone to get through something difficult. <em>"I didn't want to go to the dentist, but I bit the bullet and made the appointment."</em></p>
+    </div>
+
+    <!-- IDIOM 4 -->
+    <div class="content-block">
+      <h3>4. "Under the Weather"</h3>
+      <p><span class="tag">Meaning: to feel ill or unwell</span></p>
+      <p><strong style="color:var(--text)">Origin:</strong> Thought to come from sailing. When a sailor felt sick, they were sent below deck — literally "under the weather" (the weather being on the deck above). The shelter below helped them recover.</p>
+      <p><strong style="color:var(--text)">Used today:</strong> One of the most common English idioms. <em>"I can't come to school today — I'm feeling a bit under the weather."</em></p>
+    </div>
+
+    <div class="content-block">
+      <h3>📝 My Reflection</h3>
+      <p>What I found most interesting was how many idioms come from a historical or physical origin that has completely disappeared from modern life — yet the phrases live on. Idioms make English more vivid and expressive, and learning them helps me understand native speakers much better.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== ENTRY 3 ===== -->
+<div id="entry3" class="page">
+  <div class="entry-page">
+    <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+    <div class="entry-label">Entry #3</div>
+    <h1 class="entry-title">Airfare Interview</h1>
+    <p class="entry-subtitle">I interviewed my classmate <strong style="color:var(--text)">[Partner's Name]</strong> using the questions from page 27, question 3.</p>
+    <hr class="divider"/>
+
+    <div class="content-block" style="margin-bottom:24px">
+      <h3>About My Partner</h3>
+      <p>Write a short introduction about your interview partner here — their name, and maybe one interesting thing you learned about them from the interview.</p>
+    </div>
+
+    <div class="interview-grid">
+      <div class="interview-item">
+        <div class="q">Where did you go on your last holiday?</div>
+        <div class="a">Write your partner's answer here. Add as much detail as they gave you.</div>
+      </div>
+      <div class="interview-item">
+        <div class="q">What was your favourite part of the trip?</div>
+        <div class="a">Write your partner's answer here.</div>
+      </div>
+      <div class="interview-item">
+        <div class="q">Did anything go wrong on the trip?</div>
+        <div class="a">Write your partner's answer here.</div>
+      </div>
+      <div class="interview-item">
+        <div class="q">What is your dream holiday destination?</div>
+        <div class="a">Write your partner's answer here.</div>
+      </div>
+      <div class="interview-item">
+        <div class="q">Do you prefer city breaks or nature holidays?</div>
+        <div class="a">Write your partner's answer here.</div>
+      </div>
+      <div class="interview-item">
+        <div class="q">How do you usually get to your holiday destination?</div>
+        <div class="a">Write your partner's answer here.</div>
+      </div>
+    </div>
+
+    <div class="content-block" style="margin-top:24px">
+      <h3>💬 My Reflection</h3>
+      <p>Write a short paragraph about what you found interesting in the interview, what surprised you, or what you have in common with your partner.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== ENTRY 4 (CANCELLED) ===== -->
+<div id="entry4" class="page">
+  <div class="entry-page">
+    <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+    <div class="entry-label">Entry #4</div>
+    <h1 class="entry-title strikethrough">Story Writing</h1>
+    <div class="cancelled-badge">⊘ Cancelled by teacher</div>
+
+    <div class="cancelled-note">
+      <div class="big">📋</div>
+      <p>This entry (Story Writing) was <strong style="color:var(--text)">cancelled</strong> by the teacher and does not need to be completed.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== ENTRY 5 ===== -->
+<div id="entry5" class="page">
+  <div class="entry-page">
+    <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+    <div class="entry-label">Entry #5</div>
+    <h1 class="entry-title">Best Music of 2025</h1>
+    <p class="entry-subtitle">I explored Pitchfork's Best 50 Albums of 2025 and listened to 5 albums I had never heard before.</p>
+    <hr class="divider"/>
+
+    <div class="content-block">
+      <h3>🎧 Albums I Listened To</h3>
+      <p>Here are the 5 albums I chose from the list and had never heard before:</p>
+    </div>
+
+    <div class="album-grid">
+      <div class="album-card">
+        <div class="album-art">🎸</div>
+        <div class="album-info">
+          <div class="album-name">Album Title</div>
+          <div class="album-artist">Artist Name</div>
+        </div>
+      </div>
+      <div class="album-card">
+        <div class="album-art">🎹</div>
+        <div class="album-info">
+          <div class="album-name">Album Title</div>
+          <div class="album-artist">Artist Name</div>
+        </div>
+      </div>
+      <div class="album-card">
+        <div class="album-art">🎤</div>
+        <div class="album-info">
+          <div class="album-name">Album Title</div>
+          <div class="album-artist">Artist Name</div>
+        </div>
+      </div>
+      <div class="album-card">
+        <div class="album-art">🥁</div>
+        <div class="album-info">
+          <div class="album-name">Album Title</div>
+          <div class="album-artist">Artist Name</div>
+        </div>
+      </div>
+      <div class="album-card">
+        <div class="album-art">🎷</div>
+        <div class="album-info">
+          <div class="album-name">Album Title</div>
+          <div class="album-artist">Artist Name</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider"/>
+
+    <div class="qa-item">
+      <div class="qa-question">Have you heard any albums from Pitchfork's list before? What did you think?</div>
+      <div class="qa-answer">Write your answer here. Did you already know any of the albums? What did you think of them when you first heard them?</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-question">Which album from the list did you like the most? Why?</div>
+      <div class="qa-answer">Write your answer here. Explain what you liked about the music — the sound, the lyrics, the mood?</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-question">Are there any 2025 albums NOT on the list that you think should be?</div>
+      <div class="qa-answer">Write your answer here. Were there any albums from 2025 you loved that didn't make Pitchfork's list?</div>
+    </div>
+
+    <hr class="divider"/>
+
+    <div class="content-block">
+      <h3>⭐ Best Things of 2025 (for me personally)</h3>
+      <ul>
+        <li>Write your first best thing of 2025 here — could be a personal moment, something in the news, anything!</li>
+        <li>Write your second best thing of 2025 here.</li>
+        <li>Write your third best thing of 2025 here.</li>
+        <li>Write your fourth best thing of 2025 here (optional).</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== ENTRY 6 ===== -->
+<div id="entry6" class="page">
+  <div class="entry-page">
+    <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+    <div class="entry-label">Entry #6</div>
+    <h1 class="entry-title">Social Media Ban in Australia</h1>
+    <p class="entry-subtitle">Reflections on the BBC article about Australia's social media ban for under-16s.</p>
+    <hr class="divider"/>
+
+    <div class="qa-item">
+      <div class="qa-question">What change in behaviour did 14-year-old Amy describe after the social media ban?</div>
+      <div class="qa-answer">Write your answer here based on the BBC article. What did Amy say changed in her daily life after the ban was introduced?</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-question">What reasons did the Australian government give for introducing the ban on under-16s using social media?</div>
+      <div class="qa-answer">Write your answer here. Summarise the main arguments the government made in their own words.</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-question">How does teenager Aahil's experience differ from Amy's?</div>
+      <div class="qa-answer">Write your answer here. Compare the two teenagers — what is different about their reactions or situations?</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-question">What are some ways young people have tried to continue accessing social media despite the ban?</div>
+      <div class="qa-answer">Write your answer here. What workarounds did the article mention?</div>
+    </div>
+
+    <hr class="divider"/>
+
+    <div class="content-block">
+      <h3>💬 My Opinion</h3>
+      <div class="qa-item" style="margin:0">
+        <div class="qa-question">Do you think the ban will help teenagers develop healthier offline habits?</div>
+        <div class="qa-answer">Write your personal opinion here with reasons. Do you think it will actually work?</div>
+      </div>
+      <br/>
+      <div class="qa-item" style="margin:0">
+        <div class="qa-question">Do you agree with the government's approach? What alternatives could be considered?</div>
+        <div class="qa-answer">Write your opinion here. If not a full ban, what else could governments or parents do?</div>
+      </div>
+      <br/>
+      <div class="qa-item" style="margin:0">
+        <div class="qa-question">Would such a ban be a good thing in Switzerland?</div>
+        <div class="qa-answer">Write your opinion here. Would the same approach work in Switzerland? Why or why not?</div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entry 1 - Summer Updates</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+  <a class="nav-logo" href="index.html">✦ My Portfolio</a>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="Entry-1.html">Entry 1</a>
+    <a href="Entry-2.html">Entry 2</a>
+    <a href="Entry-3.html">Entry 3</a>
+    <a href="Entry-4.html">Entry 4</a>
+    <a href="Entry-5.html">Entry 5</a>
+    <a href="Entry-6.html"class="active">Entry 6</a>
+  </div>
+</nav>
+
+  <div class="entry-page">
+    <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+    <div class="entry-label">Entry #6</div>
+    <h1 class="entry-title">Social Media Ban in Australia</h1>
+    <p class="entry-subtitle">Reflections on the BBC article about Australia's social media ban for under-16s.</p>
+    <hr class="divider"/>
+
+    <div class="qa-item">
+      <div class="qa-question">What change in behaviour did 14-year-old Amy describe after the social media ban?</div>
+      <div class="qa-answer">Write your answer here based on the BBC article. What did Amy say changed in her daily life after the ban was introduced?</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-question">What reasons did the Australian government give for introducing the ban on under-16s using social media?</div>
+      <div class="qa-answer">Write your answer here. Summarise the main arguments the government made in their own words.</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-question">How does teenager Aahil's experience differ from Amy's?</div>
+      <div class="qa-answer">Write your answer here. Compare the two teenagers — what is different about their reactions or situations?</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-question">What are some ways young people have tried to continue accessing social media despite the ban?</div>
+      <div class="qa-answer">Write your answer here. What workarounds did the article mention?</div>
+    </div>
+
+    <hr class="divider"/>
+
+    <div class="content-block">
+      <h3>💬 My Opinion</h3>
+      <div class="qa-item" style="margin:0">
+        <div class="qa-question">Do you think the ban will help teenagers develop healthier offline habits?</div>
+        <div class="qa-answer">Write your personal opinion here with reasons. Do you think it will actually work?</div>
+      </div>
+      <br/>
+      <div class="qa-item" style="margin:0">
+        <div class="qa-question">Do you agree with the government's approach? What alternatives could be considered?</div>
+        <div class="qa-answer">Write your opinion here. If not a full ban, what else could governments or parents do?</div>
+      </div>
+      <br/>
+      <div class="qa-item" style="margin:0">
+        <div class="qa-question">Would such a ban be a good thing in Switzerland?</div>
+        <div class="qa-answer">Write your opinion here. Would the same approach work in Switzerland? Why or why not?</div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>My Portfolio · <span id="year"></span></footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    const navEl = document.getElementById('nav-' + id);
+    if (navEl) navEl.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>

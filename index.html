@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My English Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">✦ My Portfolio</a>
+
+  <div class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="Entry-1.html">Entry 1</a>
+    <a href="Entry-2.html">Entry 2</a>
+    <a href="Entry-3.html">Entry 3</a>
+    <a href="Entry-4.html">Entry 4</a>
+    <a href="Entry-5.html">Entry 5</a>
+    <a href="Entry-6.html">Entry 6</a>
+  </div>
+</nav>
+
+<!-- ===== HOME ===== -->
+<div id="home" class="page active">
+  <div class="hero">
+    <div class="hero-tag">English Class · 2024/25</div>
+    <h1>My English<br/><em>Portfolio</em></h1>
+    <p>A collection of writing, research, and reflections from my English class this year. Click any entry below to read more.</p>
+  </div>
+
+  <div class="entries-grid">
+    <div class="entry-card" onclick="showPage('Entry-1.html')">
+      <div class="card-thumb c1">
+        <img src="Budapest.png" alt="Summer Highlights">
+      </div>
+      <div class="card-arrow">→</div>
+      <div class="card-body">
+        <div class="card-number">Entry #1</div>
+        <div class="card-title">Summer Updates</div>
+        <div class="card-desc">3 summer highlights, 1 lowlight & its solution.</div>
+      </div>
+    </div>
+
+    <div class="entry-card" onclick="showPage('Entry-2.html')">
+      <div class="card-thumb c2">
+        <img src="Research.png" alt="Research">
+      </div>
+      <div class="card-arrow">→</div>
+      <div class="card-body">
+        <div class="card-number">Entry #2</div>
+        <div class="card-title">Research Task</div>
+        <div class="card-desc">A deep dive into an interesting topic of my choice.</div>
+      </div>
+    </div>
+
+    <div class="entry-card" onclick="showPage('Entry-3.html')">
+      <div class="card-thumb c3">
+        <img src="Airfare.png" alt="Airfare Interview">
+      </div>
+      <div class="card-arrow">→</div>
+      <div class="card-body">
+        <div class="card-number">Entry #3</div>
+        <div class="card-title">Airfare Interview</div>
+        <div class="card-desc">Interview questions answered by a classmate.</div>
+      </div>
+    </div>
+
+    <div class="entry-card" onclick="showPage('Entry-4.html')">
+      <div class="card-thumb c4">
+        <img src="Story.png" alt="Story Writing">
+      </div>
+      <div class="card-arrow" style="color:var(--muted)">✕</div>
+      <div class="card-body">
+        <div class="card-number">Entry #4</div>
+        <div class="card-title strikethrough">Story Writing</div>
+        <div class="card-desc" style="color:#c97e7e">This entry was cancelled.</div>
+      </div>
+    </div>
+
+    <div class="entry-card" onclick="showPage('Entry-5.html')">
+      <div class="card-thumb c5">
+        <img src="Music.png" alt="Best Music of 2025">
+      </div>
+      <div class="card-arrow">→</div>
+      <div class="card-body">
+        <div class="card-number">Entry #5</div>
+        <div class="card-title">Best Music of 2025</div>
+        <div class="card-desc">Exploring Pitchfork's top albums & best moments of 2025.</div>
+      </div>
+    </div>
+
+    <div class="entry-card" onclick="showPage('Entry-6.html')">
+      <div class="card-thumb c6">
+        <img src="Australia.png" alt="Social Media Ban">
+      </div>
+      <div class="card-arrow">→</div>
+      <div class="card-body">
+        <div class="card-number">Entry #6</div>
+        <div class="card-title">Social Media Ban in AUS</div>
+        <div class="card-desc">Reflections on Australia's ban on social media for under-16s.</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>My Portfolio · <span id="year"></span></footer>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    const navEl = document.getElementById('nav-' + id);
+    if (navEl) navEl.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  
+  function showPage(page) {
+  window.location.href = page;
+  }
+</script>
+</body>
+</html>

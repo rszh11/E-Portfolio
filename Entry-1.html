@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entry 1 - Summer Updates</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+  <a class="nav-logo" href="index.html">✦ My Portfolio</a>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="Entry-1.html"class="active">Entry 1</a>
+    <a href="Entry-2.html">Entry 2</a>
+    <a href="Entry-3.html">Entry 3</a>
+    <a href="Entry-4.html">Entry 4</a>
+    <a href="Entry-5.html">Entry 5</a>
+    <a href="Entry-6.html">Entry 6</a>
+  </div>
+</nav>
+
+  <div class="entry-page">
+    <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+    <div class="entry-label">Entry #1</div>
+    <h1 class="entry-title">Summer Updates</h1>
+    <p class="entry-subtitle">Three highlights from my summer, plus one lowlight — and how I dealt with it.</p>
+    <hr class="divider"/>
+
+    <h2 class="accent1">✦ Three Highlights</h2>
+
+    <div class="highlight-grid">
+      <div class="highlight-card">
+        <div class="highlight-img-placeholder">
+          <img src="Budapest.png" alt="Summer Highlights">
+        </div>
+        <div class="highlight-body">
+          <div class="highlight-num">Highlight 1</div>
+          <div class="highlight-title">Your Title Here</div>
+          <div class="highlight-text">Write about your first highlight here. What happened? Why was it special? How did it make you feel?</div>
+        </div>
+      </div>
+
+      <div class="highlight-card">
+        <div class="highlight-img-placeholder">
+          <img src="Budapest.png" alt="Summer Highlights">
+        </div>
+        <div class="highlight-body">
+          <div class="highlight-num">Highlight 2</div>
+          <div class="highlight-title">Your Title Here</div>
+          <div class="highlight-text">Write about your second highlight here. Describe where you were, who you were with, and what made it memorable.</div>
+        </div>
+      </div>
+
+      <div class="highlight-card">
+        <div class="highlight-img-placeholder">
+          <img src="Budapest.png" alt="Summer Highlights">
+        </div>
+        <div class="highlight-body">
+          <div class="highlight-num">Highlight 3</div>
+          <div class="highlight-title">Your Title Here</div>
+          <div class="highlight-text">Write about your third highlight here. What did you learn or take away from this experience?</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider"/>
+
+    <h2 class="accent2">✦ One Lowlight</h2>
+
+    <div class="lowlight-box">
+      <div class="label">Lowlight</div>
+      <h3>Your Lowlight Title Here</h3>
+      <p>Describe your summer lowlight here. What went wrong? How did it affect you? Be honest — this is your personal reflection. You don't need to share anything too private, just something that wasn't ideal about your summer.</p>
+    </div>
+
+    <div class="solution-box">
+      <div class="solution-icon">💡</div>
+      <div>
+        <strong>My Solution</strong>
+        <p>Explain how you dealt with this lowlight, or what you would do differently next time. What did you learn from the experience?</p>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>My Portfolio · <span id="year"></span></footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    const navEl = document.getElementById('nav-' + id);
+    if (navEl) navEl.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
