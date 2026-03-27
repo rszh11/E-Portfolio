@@ -6,7 +6,7 @@
       --accent: #f2b134;
       --accent2: #d4980e;
       --text: #1a1a1a;
-      --muted: #000000;
+      --muted: #ffffff;
       --radius: 16px;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
