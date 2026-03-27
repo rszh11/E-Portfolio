@@ -6,7 +6,8 @@
       --accent: #f2b134;
       --accent2: #d4980e;
       --text: #1a1a1a;
-      --muted: #ffffff;
+      --muted: #000000;
+      --nav: #ffffff;
       --radius: 16px;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -34,7 +35,7 @@
     }
     .nav-links { display: flex; gap: 8px; }
     .nav-links a {
-      color: var(--muted); text-decoration: none; font-size: 0.82rem;
+      color: var(--nav); text-decoration: none; font-size: 0.82rem;
       padding: 6px 14px; border-radius: 20px; transition: all 0.2s;
       letter-spacing: 0.03em; font-weight: 500;
     }
