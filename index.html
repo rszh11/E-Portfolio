@@ -9,6 +9,8 @@
 </head>
 <body>
 
+  <canvas id="confetti-canvas"></canvas>
+  
 <nav>
   <a class="nav-logo" href="index.html">✦ My Portfolio</a>
 
@@ -20,6 +22,9 @@
     <a href="Entry-4.html">Entry 4</a>
     <a href="Entry-5.html">Entry 5</a>
     <a href="Entry-6.html">Entry 6</a>
+    <a href="Entry-7.html">Entry 7</a>
+    <a href="Entry-8.html">Entry 8</a>
+    <a href="Entry-9.html">Entry 9</a>
   </div>
 </nav>
 
@@ -32,80 +37,209 @@
   </div>
 
   <div class="entries-grid">
-    <div class="entry-card" onclick="showPage('Entry-1.html')">
-      <div class="card-thumb c1">
-        <img src="Budapest.png" alt="Summer Highlights">
-      </div>
-      <div class="card-arrow">→</div>
-      <div class="card-body">
-        <div class="card-number">Entry #1</div>
-        <div class="card-title">Summer Updates</div>
-        <div class="card-desc">3 summer highlights, 1 lowlight & its solution.</div>
-      </div>
-    </div>
 
-    <div class="entry-card" onclick="showPage('Entry-2.html')">
-      <div class="card-thumb c2">
-        <img src="Research.png" alt="Research">
-      </div>
-      <div class="card-arrow">→</div>
-      <div class="card-body">
-        <div class="card-number">Entry #2</div>
-        <div class="card-title">Research Task</div>
-        <div class="card-desc">A deep dive into an interesting topic of my choice.</div>
-      </div>
-    </div>
-
-    <div class="entry-card" onclick="showPage('Entry-3.html')">
-      <div class="card-thumb c3">
-        <img src="Airfare.png" alt="Airfare Interview">
-      </div>
-      <div class="card-arrow">→</div>
-      <div class="card-body">
-        <div class="card-number">Entry #3</div>
-        <div class="card-title">Airfare Interview</div>
-        <div class="card-desc">Interview questions answered by a classmate.</div>
-      </div>
-    </div>
-
-    <div class="entry-card" onclick="showPage('Entry-4.html')">
-      <div class="card-thumb c4">
-        <img src="Story.png" alt="Story Writing">
-      </div>
-      <div class="card-arrow" style="color:var(--muted)">✕</div>
-      <div class="card-body">
-        <div class="card-number">Entry #4</div>
-        <div class="card-title strikethrough">Story Writing</div>
-        <div class="card-desc" style="color:#c97e7e">This entry was cancelled.</div>
-      </div>
-    </div>
-
-    <div class="entry-card" onclick="showPage('Entry-5.html')">
-      <div class="card-thumb c5">
-        <img src="Music.png" alt="Best Music of 2025">
-      </div>
-      <div class="card-arrow">→</div>
-      <div class="card-body">
-        <div class="card-number">Entry #5</div>
-        <div class="card-title">Best Music of 2025</div>
-        <div class="card-desc">Exploring Pitchfork's top albums & best moments of 2025.</div>
-      </div>
-    </div>
-
-    <div class="entry-card" onclick="showPage('Entry-6.html')">
-      <div class="card-thumb c6">
-        <img src="Australia.png" alt="Social Media Ban">
-      </div>
-      <div class="card-arrow">→</div>
-      <div class="card-body">
-        <div class="card-number">Entry #6</div>
-        <div class="card-title">Social Media Ban in AUS</div>
-        <div class="card-desc">Reflections on Australia's ban on social media for under-16s.</div>
-      </div>
+  <div class="entry-card" onclick="showPage('Entry-1.html')">
+    <div class="card-thumb c1"><img src="Budapest.png" alt="Summer Highlights"></div>
+    <div class="card-arrow">→</div>
+    <div class="card-body">
+      <div class="card-number">Entry #1</div>
+      <div class="card-title">Summer Updates</div>
+      <div class="card-desc">3 summer highlights, 1 lowlight & its solution.</div>
     </div>
   </div>
 
-  <footer>My Portfolio · <span id="year"></span></footer>
+  <div class="entry-card" onclick="showPage('Entry-2.html')">
+    <div class="card-thumb c2"><img src="Research.png" alt="Research"></div>
+    <div class="card-arrow">→</div>
+    <div class="card-body">
+      <div class="card-number">Entry #2</div>
+      <div class="card-title">Research Task</div>
+      <div class="card-desc">A deep dive into an interesting topic of my choice.</div>
+    </div>
+  </div>
+
+  <div class="entry-card" onclick="showPage('Entry-3.html')">
+    <div class="card-thumb c3"><img src="Airfare.png" alt="Airfare Interview"></div>
+    <div class="card-arrow">→</div>
+    <div class="card-body">
+      <div class="card-number">Entry #3</div>
+      <div class="card-title">Airfare Interview</div>
+      <div class="card-desc">Interview questions answered by a classmate.</div>
+    </div>
+  </div>
+
+  <div class="entry-card" onclick="showPage('Entry-4.html')">
+    <div class="card-thumb c4"><img src="Story.png" alt="Story Writing"></div>
+    <div class="card-arrow">→</div>
+    <div class="card-body">
+      <div class="card-number">Entry #4</div>
+      <div class="card-title">Story</div>
+      <div class="card-desc">A event in my childhood.</div>
+    </div>
+  </div>
+
+  <div class="entry-card" onclick="showPage('Entry-5.html')">
+    <div class="card-thumb c5"><img src="Music.png" alt="Best Music of 2025"></div>
+    <div class="card-arrow">→</div>
+    <div class="card-body">
+      <div class="card-number">Entry #5</div>
+      <div class="card-title">Best Music of 2025</div>
+      <div class="card-desc">Exploring Pitchfork's top albums & best moments of 2025.</div>
+    </div>
+  </div>
+
+  <div class="entry-card" onclick="showPage('Entry-6.html')">
+    <div class="card-thumb c6"><img src="Australia.png" alt="Social Media Ban"></div>
+    <div class="card-arrow">→</div>
+    <div class="card-body">
+      <div class="card-number">Entry #6</div>
+      <div class="card-title">Social Media Ban in AUS</div>
+      <div class="card-desc">Reflections on Australia's ban on social media for under-16s.</div>
+    </div>
+  </div>
+
+  <div class="entry-card" onclick="showPage('Entry-7.html')">
+    <div class="card-thumb c7"><img src="Future.png" alt="Future Predictions"></div>
+    <div class="card-arrow">→</div>
+    <div class="card-body">
+      <div class="card-number">Entry #7</div>
+      <div class="card-title">Future Predictions</div>
+      <div class="card-desc">Use the future perfect and future continuous.</div>
+    </div>
+  </div>
+
+  <div class="entry-card" onclick="showPage('Entry-8.html')">
+    <div class="card-thumb c8"><img src="Mystery.png" alt="Entry 8"></div>
+    <div class="card-arrow">→</div>
+    <div class="card-body">
+      <div class="card-number">Entry #8</div>
+      <div class="card-title">Murder Mystery</div>
+      <div class="card-desc">Who killed Joel Arnheim?!</div>
+    </div>
+  </div>
+
+  <div class="entry-card" onclick="showPage('Entry-9.html')">
+    <div class="card-thumb c9"><img src="Soccer.jpeg" alt="Entry 9"></div>
+    <div class="card-arrow">→</div>
+    <div class="card-body">
+      <div class="card-number">Entry #9</div>
+      <div class="card-title">Freestyle</div>
+      <div class="card-desc">The Legends of Soccer</div>
+    </div>
+  </div>
+
+  <div class="entry-card" onclick="showPage('source directory.html')">
+    <div class="card-thumb c9"><img src="Source.jpg" alt="Source directory"></div>
+    <div class="card-arrow">→</div>
+    <div class="card-body">
+      <div class="card-number">Source Directory</div>
+    </div>
+  </div>
+
+</div>
+  
+
+    
+
+
+  <div class="portfolio-scroll">
+    <strong>If you like to scroll down, you can use this one or just click above on the Navigation to go from Site to Site.</strong>
+    <br>
+    <br>
+
+    <div class="entry-section" id="entry-1">
+      <div class="entry-section-bar">
+        <span class="entry-section-num">01</span>
+        <span class="entry-section-title">Summer Updates</span>
+        <a class="entry-section-link" href="Entry-1.html" target="_blank">Open page ↗</a>
+      </div>
+      <iframe class="entry-frame" src="Entry-1.html" loading="lazy" title="Entry 1 – Summer Updates"></iframe>
+    </div>
+
+    <div class="entry-section" id="entry-2">
+      <div class="entry-section-bar">
+        <span class="entry-section-num">02</span>
+        <span class="entry-section-title">Research Task</span>
+        <a class="entry-section-link" href="Entry-2.html" target="_blank">Open page ↗</a>
+      </div>
+      <iframe class="entry-frame" src="Entry-2.html" loading="lazy" title="Entry 2 – Research Task"></iframe>
+    </div>
+
+    <div class="entry-section" id="entry-3">
+      <div class="entry-section-bar">
+        <span class="entry-section-num">03</span>
+        <span class="entry-section-title">Airfare Interview</span>
+        <a class="entry-section-link" href="Entry-3.html" target="_blank">Open page ↗</a>
+      </div>
+      <iframe class="entry-frame" src="Entry-3.html" loading="lazy" title="Entry 3 – Airfare Interview"></iframe>
+    </div>
+
+    <div class="entry-section" id="entry-4">
+      <div class="entry-section-bar">
+        <span class="entry-section-num">04</span>
+        <span class="entry-section-title">Story</span>
+        <a class="entry-section-link" href="Entry-4.html" target="_blank">Open page ↗</a>
+      </div>
+      <iframe class="entry-frame" src="Entry-4.html" loading="lazy" title="Entry 4 – Story"></iframe>
+    </div>
+
+    <div class="entry-section" id="entry-5">
+      <div class="entry-section-bar">
+        <span class="entry-section-num">05</span>
+        <span class="entry-section-title">Best Music of 2025</span>
+        <a class="entry-section-link" href="Entry-5.html" target="_blank">Open page ↗</a>
+      </div>
+      <iframe class="entry-frame" src="Entry-5.html" loading="lazy" title="Entry 5 – Best Music of 2025"></iframe>
+    </div>
+
+    <div class="entry-section" id="entry-6">
+      <div class="entry-section-bar">
+        <span class="entry-section-num">06</span>
+        <span class="entry-section-title">Social Media Ban in AUS</span>
+        <a class="entry-section-link" href="Entry-6.html" target="_blank">Open page ↗</a>
+      </div>
+      <iframe class="entry-frame" src="Entry-6.html" loading="lazy" title="Entry 6 – Social Media Ban in AUS"></iframe>
+    </div>
+
+    <div class="entry-section" id="entry-7">
+      <div class="entry-section-bar">
+        <span class="entry-section-num">07</span>
+        <span class="entry-section-title">Future Predictions</span>
+        <a class="entry-section-link" href="Entry-7.html" target="_blank">Open page ↗</a>
+      </div>
+      <iframe class="entry-frame" src="Entry-7.html" loading="lazy" title="Entry 7 – Future Predictions"></iframe>
+    </div>
+
+    <div class="entry-section" id="entry-8">
+      <div class="entry-section-bar">
+        <span class="entry-section-num">08</span>
+        <span class="entry-section-title">Murder Mystery</span>
+        <a class="entry-section-link" href="Entry-8.html" target="_blank">Open page ↗</a>
+      </div>
+      <iframe class="entry-frame" src="Entry-8.html" loading="lazy" title="Entry 8 – Murder Mystery"></iframe>
+    </div>
+
+    <div class="entry-section" id="entry-9">
+      <div class="entry-section-bar">
+        <span class="entry-section-num">09</span>
+        <span class="entry-section-title">Freestyle</span>
+        <a class="entry-section-link" href="Entry-9.html" target="_blank">Open page ↗</a>
+      </div>
+      <iframe class="entry-frame" src="Entry-9.html" loading="lazy" title="Entry 9 – Freestyle"></iframe>
+    </div>
+
+    <div class="entry-section" id="source-directory">
+      <div class="entry-section-bar">
+        <span class="entry-section-num">✦</span>
+        <span class="entry-section-title">Source Directory</span>
+        <a class="entry-section-link" href="source directory.html" target="_blank">Open page ↗</a>
+      </div>
+      <iframe class="entry-frame" src="source directory.html" loading="lazy" title="Source Directory"></iframe>
+    </div>
+
+  </div>
+
+<footer>My Portfolio · <span id="year"></span> · <button class="source-btn" onclick="window.location.href='source directory.html'">Source directory</button></footer>
 </div>
 
 <script>
@@ -123,6 +257,83 @@
   function showPage(page) {
   window.location.href = page;
   }
+
+  // Embed each entry page inline and auto-size its iframe (PDF-style scroll)
+  document.querySelectorAll('.entry-frame').forEach(frame => {
+    frame.addEventListener('load', () => {
+      try {
+        const doc = frame.contentWindow.document;
+
+        // hide the nested page's own nav/footer/back-buttons so it reads as one continuous page
+        const nav = doc.querySelector('nav'); if (nav) nav.style.display = 'none';
+        const navRow = doc.querySelector('.nav-row'); if (navRow) navRow.style.display = 'none';
+        const foot = doc.querySelector('footer'); if (foot) foot.style.display = 'none';
+        const entryPage = doc.querySelector('.entry-page'); if (entryPage) entryPage.style.paddingTop = '24px';
+
+        const resize = () => { frame.style.height = doc.documentElement.scrollHeight + 'px'; };
+        resize();
+        setTimeout(resize, 400);
+        setTimeout(resize, 1200);
+        new ResizeObserver(resize).observe(doc.body);
+      } catch (e) {
+        frame.style.height = '900px';
+      }
+    });
+  });
+
+  const canvas = document.getElementById('confetti-canvas');
+const ctx = canvas.getContext('2d');
+let particles = [];
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+// Funktion für den automatischen Plopp
+function popConfetti() {
+    for (let i = 0; i < 120; i++) {
+        const angle = Math.random() * Math.PI * 2;
+        const speed = Math.random() * 15 + 5;
+        particles.push({
+            x: canvas.width / 2,  // Start in der Bildschirmmitte (X)
+            y: canvas.height / 2, // Start in der Bildschirmmitte (Y)
+            dx: Math.cos(angle) * speed,
+            dy: Math.sin(angle) * speed,
+            size: Math.random() * 6 + 4,
+            color: `hsl(${Math.random() * 360}, 100%, 60%)`,
+            drag: 0.95,
+            gravity: 0.2
+        });
+    }
+}
+
+function updateConfetti() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach((p, i) => {
+        p.dx *= p.drag; 
+        p.dy *= p.drag; 
+        p.dy += p.gravity;
+        p.x += p.dx; 
+        p.y += p.dy;
+        
+        ctx.fillStyle = p.color;
+        ctx.fillRect(p.x, p.y, p.size, p.size);
+        
+        if (p.y > canvas.height) particles.splice(i, 1);
+    });
+    requestAnimationFrame(updateConfetti);
+}
+
+// Startet den Effekt automatisch beim Laden der Seite
+window.onload = () => {
+    popConfetti();
+    updateConfetti();
+};
+
+
 </script>
 </body>
 </html>

@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Entry 1 - Summer Updates</title>
+  <title>Entry 4 - Story </title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
-
+<div id="random-car">📔</div>
   <nav>
   <a class="nav-logo" href="index.html">✦ My Portfolio</a>
 
@@ -17,36 +17,67 @@
     <a href="Entry-1.html">Entry 1</a>
     <a href="Entry-2.html">Entry 2</a>
     <a href="Entry-3.html">Entry 3</a>
-    <a href="Entry-4.html"class="active">Entry 4</a>
+    <a href="Entry-4.html" class="active">Entry 4</a>
     <a href="Entry-5.html">Entry 5</a>
     <a href="Entry-6.html">Entry 6</a>
+    <a href="Entry-7.html">Entry 7</a>
+    <a href="Entry-8.html">Entry 8</a>
+    <a href="Entry-9.html">Entry 9</a>
   </div>
 </nav>
 
   <div class="entry-page">
+    <div class="nav-row">
     <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+    <button class="back-btn" onclick="window.location.href='Entry-5.html'">Entry 5 →</button>
+    </div>
     <div class="entry-label">Entry #4</div>
-    <h1 class="entry-title strikethrough">Story Writing</h1>
-    <div class="cancelled-badge">⊘ Cancelled by teacher</div>
+    <h1 class="entry-title">Story – A Big Change</h1>
 
     <div class="cancelled-note">
       <div class="big">📋</div>
-      <p>This entry (Story Writing) was <strong style="color:var(--text)">cancelled</strong> by the teacher and does not need to be completed.</p>
+      <p>Moving from nursery to primary school was a big event for me. Before the school year started, I had so many memories and had been playing with the same friends every day.</p>
+      <br>
+      <p>Unfortunately, I had to go to a different school than them. On my first day of 1st class, while I was walking into the new classroom, I felt very scared, but I saw most of the others were also nervous — so it calmed me down. Sadly, my old friends had gone to another school.</p>
+      <br>
+      <p>However, I sat next to a nice boy, and we became friends quickly. This event still makes me think about my childhood. It taught me that big changes can be scary, but you can always learn something from them.</p>
     </div>
   </div>
-</div>
-<footer>My Portfolio · <span id="year"></span></footer>
+
+<footer>My Portfolio · <span id="year"></span> · <button class="source-btn" onclick="window.location.href='source directory.html'">Source directory</button></footer>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  function showPage(id) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-    const navEl = document.getElementById('nav-' + id);
-    if (navEl) navEl.classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+  window.addEventListener('DOMContentLoaded', () => {
+    const car = document.getElementById('random-car');
+    if (!car) return;
+
+    // 1. Zufällige Höhe berechnen (zwischen 10% und 90% der Bildschirmhöhe)
+    const randomY = Math.random() * 80 + 10;
+    car.style.top = randomY + '%';
+
+    // 2. Zufällige Geschwindigkeit berechnen (Dauer der Fahrt zwischen 3 und 6 Sekunden)
+    const randomDuration = Math.random() * 3 + 3;
+    car.style.transitionDuration = randomDuration + 's';
+
+    // 3. Zufällige Fahrtrichtung festlegen (50% Chance für links oder rechts)
+    const driveRight = Math.random() > 0.5;
+
+    // 4. Animation kurz nach dem Laden starten
+    setTimeout(() => {
+        if (driveRight) {
+            car.classList.add('drive-right');
+        } else {
+            // Für Fahrt nach links müssen wir die Startposition anpassen
+            car.style.left = 'auto';
+            car.style.right = '-200px';
+            // Eine kleine Verzögerung, damit der Browser die neue Startposition registriert
+            requestAnimationFrame(() => {
+                car.classList.add('drive-left');
+            });
+        }
+    }, 500); // Startet 0.5 Sekunden nach dem Laden
+});
 </script>
 </body>
 </html>

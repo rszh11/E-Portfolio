@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entry 7 - Future Predictions</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="random-car">🔮</div>
+  <nav>
+  <a class="nav-logo" href="index.html">✦ My Portfolio</a>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="Entry-1.html">Entry 1</a>
+    <a href="Entry-2.html">Entry 2</a>
+    <a href="Entry-3.html">Entry 3</a>
+    <a href="Entry-4.html">Entry 4</a>
+    <a href="Entry-5.html">Entry 5</a>
+    <a href="Entry-6.html">Entry 6</a>
+    <a href="Entry-7.html" class="active">Entry 7</a>
+    <a href="Entry-8.html">Entry 8</a>
+    <a href="Entry-9.html">Entry 9</a>
+  </div>
+</nav>
+
+  <div class="entry-page">
+    <div class="nav-row">
+    <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+    <button class="back-btn" onclick="window.location.href='Entry-8.html'">Entry 8 →</button>
+    </div>
+    <div class="entry-label">Entry #7</div>
+    <h1 class="entry-title">Future Predictions</h1>
+    <p class="entry-subtitle">For this entry, I'm making predictions about the future using the future continuous and future perfect tenses — here's how I think our world will look in a few decades.</p>
+    <hr class="divider"/>
+
+    <div class="prediction-grid">
+      <div class="prediction-card">
+        <div class="prediction-icon">🛍️</div>
+        <div>
+          <h3>Social Media & Shopping</h3>
+          <p>In 2050, we will be using AI assistants to do all our online shopping for us. By that time, online shops like now will have disappeared completely because apps will know exactly what we want to buy before we even ask — probably because of the algorithm.</p>
+        </div>
+      </div>
+      <div class="prediction-card">
+        <div class="prediction-icon">🏥</div>
+        <div>
+          <h3>Health, Medicine & Housing</h3>
+          <p>Smart tech will be monitoring our health from a phone 24/7. Robots will have built modern, air-conditioned houses for everyone, and intelligent systems will fix any technical problems automatically.</p>
+        </div>
+      </div>
+      <div class="prediction-card">
+        <div class="prediction-icon">🗳️</div>
+        <div>
+          <h3>Fashion & Politics</h3>
+          <p>People will be wearing high-tech clothes that change color based on our mood. In politics, digital voting systems will have replaced voting on paper everywhere, making decisions much faster and more secure — like Swiyu already being integrated with the E-ID.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reflection-box">
+      <div class="label">My Reflection</div>
+      <p>As an ICT student, it's exciting to think about the future. Most of these changes could be built on new software and smart technology.</p>
+    </div>
+  </div>
+
+<footer>My Portfolio · <span id="year"></span> · <button class="source-btn" onclick="window.location.href='source directory.html'">Source directory</button></footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const car = document.getElementById('random-car');
+    if (!car) return;
+
+    // 1. Zufällige Höhe berechnen (zwischen 10% und 90% der Bildschirmhöhe)
+    const randomY = Math.random() * 80 + 10;
+    car.style.top = randomY + '%';
+
+    // 2. Zufällige Geschwindigkeit berechnen (Dauer der Fahrt zwischen 3 und 6 Sekunden)
+    const randomDuration = Math.random() * 3 + 3;
+    car.style.transitionDuration = randomDuration + 's';
+
+    // 3. Zufällige Fahrtrichtung festlegen (50% Chance für links oder rechts)
+    const driveRight = Math.random() > 0.5;
+
+    // 4. Animation kurz nach dem Laden starten
+    setTimeout(() => {
+        if (driveRight) {
+            car.classList.add('drive-right');
+        } else {
+            // Für Fahrt nach links müssen wir die Startposition anpassen
+            car.style.left = 'auto';
+            car.style.right = '-200px';
+            // Eine kleine Verzögerung, damit der Browser die neue Startposition registriert
+            requestAnimationFrame(() => {
+                car.classList.add('drive-left');
+            });
+        }
+    }, 500); // Startet 0.5 Sekunden nach dem Laden
+});
+</script>
+</body>
+</html>

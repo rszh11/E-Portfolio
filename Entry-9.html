@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entry 9 - Freestyle – The Path to Becoming a Pro</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="random-car">⚽️</div>
+  <nav>
+  <a class="nav-logo" href="index.html">✦ My Portfolio</a>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="Entry-1.html">Entry 1</a>
+    <a href="Entry-2.html">Entry 2</a>
+    <a href="Entry-3.html">Entry 3</a>
+    <a href="Entry-4.html">Entry 4</a>
+    <a href="Entry-5.html">Entry 5</a>
+    <a href="Entry-6.html">Entry 6</a>
+    <a href="Entry-7.html">Entry 7</a>
+    <a href="Entry-8.html">Entry 8</a>
+    <a href="Entry-9.html" class="active">Entry 9</a>
+  </div>
+</nav>
+
+  <div class="entry-page">
+    <div class="nav-row">
+    <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+    <button class="back-btn" onclick="window.location.href='source directory.html'">Source Directory →</button>
+    </div>
+    <div class="entry-label">Entry #9</div>
+    <h1 class="entry-title">Freestyle</h1>
+    <p class="entry-subtitle">The Path to Becoming a Pro — how the journey to becoming a professional soccer player has changed over history.</p>
+    <hr class="divider"/>
+
+    <img class="entry-hero-img" src="Soccer.jpeg" alt="Legends of soccer">
+
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="era">In The Past</div>
+        <h3>Street Soccer & Raw Talent</h3>
+        <p>Players started on the street. Pelé grew up very poor in Brazil and practiced with a rolled-up sock filled with paper, since he had no money for a real ball. A scout found him by luck and he became a professional at age 15. Maradona learned all his famous dribbling skills on dirty streets in Argentina. Back then, there were no big training centers — players became superstars because of natural talent and passion.</p>
+      </div>
+      <div class="compare-card">
+        <div class="era">Today</div>
+        <h3>A Big, Organized Business</h3>
+        <p>Lionel Messi was scouted at age 12, and his first contract with FC Barcelona was famously written on a simple paper napkin because the club wanted him immediately. Cristiano Ronaldo left his family at age 12 to live and train at a professional academy.</p>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <h3>The Modern Academy</h3>
+      <p>Now, street soccer is not enough. Kids must join a professional youth academy when they are 8 or 10 years old. The lifestyle is like a real job — young players have strict training plans, special food and doctors. Modern soccer is much faster, so clubs look for perfect athletes.</p>
+    </div>
+
+    <div class="reflection-box">
+      <div class="label">Conclusion</div>
+      <p>Becoming a professional is much harder today than in the past. You need talent, but you also need extreme discipline and a perfect athletic education to make it to the top.</p>
+    </div>
+  </div>
+
+<footer>My Portfolio · <span id="year"></span> · <button class="source-btn" onclick="window.location.href='source directory.html'">Source directory</button></footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const car = document.getElementById('random-car');
+    if (!car) return;
+
+    // 1. Zufällige Höhe berechnen (zwischen 10% und 90% der Bildschirmhöhe)
+    const randomY = Math.random() * 80 + 10;
+    car.style.top = randomY + '%';
+
+    // 2. Zufällige Geschwindigkeit berechnen (Dauer der Fahrt zwischen 3 und 6 Sekunden)
+    const randomDuration = Math.random() * 3 + 3;
+    car.style.transitionDuration = randomDuration + 's';
+
+    // 3. Zufällige Fahrtrichtung festlegen (50% Chance für links oder rechts)
+    const driveRight = Math.random() > 0.5;
+
+    // 4. Animation kurz nach dem Laden starten
+    setTimeout(() => {
+        if (driveRight) {
+            car.classList.add('drive-right');
+        } else {
+            // Für Fahrt nach links müssen wir die Startposition anpassen
+            car.style.left = 'auto';
+            car.style.right = '-200px';
+            // Eine kleine Verzögerung, damit der Browser die neue Startposition registriert
+            requestAnimationFrame(() => {
+                car.classList.add('drive-left');
+            });
+        }
+    }, 500); // Startet 0.5 Sekunden nach dem Laden
+});
+</script>
+</body>
+</html>

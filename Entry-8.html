@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entry 8 - Murder Mystery</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="random-car">🔪</div>
+  <nav>
+  <a class="nav-logo" href="index.html">✦ My Portfolio</a>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="Entry-1.html">Entry 1</a>
+    <a href="Entry-2.html">Entry 2</a>
+    <a href="Entry-3.html">Entry 3</a>
+    <a href="Entry-4.html">Entry 4</a>
+    <a href="Entry-5.html">Entry 5</a>
+    <a href="Entry-6.html">Entry 6</a>
+    <a href="Entry-7.html">Entry 7</a>
+    <a href="Entry-8.html" class="active">Entry 8</a>
+    <a href="Entry-9.html">Entry 9</a>
+  </div>
+</nav>
+
+  <div class="entry-page">
+    <div class="nav-row">
+    <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+    <button class="back-btn" onclick="window.location.href='Entry-9.html'">Entry 9 →</button>
+    </div>
+    <div class="entry-label">Entry #8</div>
+    <h1 class="entry-title">Murder Mystery</h1>
+    <p class="entry-subtitle">Murder in Paradise — a logic game where I played detective on a tropical island to find out who killed millionaire Joel Arnheim.</p>
+    <hr class="divider"/>
+
+    <strong>The Mystery Plan </strong>
+    <div class="entry-hero-frame">
+      <img src="Mystery Plan.png" alt="Mystery Plan">
+    </div>
+    
+
+    <div class="content-block">
+      <h3>1. The Plot</h3>
+      <p>The crime happened on Paradise Island, where rich businessman Joel Arnheim was murdered in his room. The police had four main suspects: his wife Gillian, the cook Pedro, and his business partners Nigel and Alberto.</p>
+    </div>
+
+    <div class="suspect-grid">
+      <div class="suspect-card">
+        <div class="suspect-avatar">👩</div>
+        <div class="suspect-name">Gillian</div>
+        <div class="suspect-alibi">Said she left her husband alone because she felt unwell.</div>
+      </div>
+      <div class="suspect-card">
+        <div class="suspect-avatar">👨‍🍳</div>
+        <div class="suspect-name">Pedro</div>
+        <div class="suspect-alibi">Said he was busy working in the kitchen all night.</div>
+      </div>
+      <div class="suspect-card">
+        <div class="suspect-avatar">🥃</div>
+        <div class="suspect-name">Nigel</div>
+        <div class="suspect-alibi">Was drunk and pretended he never left the lounge.</div>
+      </div>
+      <div class="suspect-card">
+        <div class="suspect-avatar">🕴️</div>
+        <div class="suspect-name">Alberto</div>
+        <div class="suspect-alibi">Also said he stayed in the lounge all evening.</div>
+      </div>
+    </div>
+
+    <div class="content-block">
+      <h3>2. My Role & Strategy</h3>
+      <p>I took on the role of the detective. To get ready for the game, I studied the case facts and memorized the details so I could interview the suspects and catch them in any lies.</p>
+    </div>
+
+    <div class="content-block">
+      <h3>3. The Investigation</h3>
+      <p>During the game, I questioned everyone one by one. I spent around five minutes with each suspect, asking about their connection to Joel, their stories, and where exactly they were when the murder happened.</p>
+    </div>
+
+    <div class="content-block">
+      <h3>4. My Theory</h3>
+      <p>My main suspect was Gillian. It seemed highly suspicious that she walked to a completely different restroom and disappeared for 30 minutes. In the end, though, my theory was incorrect.</p>
+    </div>
+
+    <div class="reveal-box">
+      <div class="label">5. The Twist</div>
+      <p>The final reveal completely shocked me! The murder was actually a team effort by <strong>Alberto</strong>, <strong>Pedro</strong>, and <strong>Gillian</strong>. It turned out Alberto and Gillian were secretly dating, and Alberto gave Pedro 200,000 CHF to get rid of Joel. I never saw that coming!</p>
+    </div>
+  </div>
+
+<footer>My Portfolio · <span id="year"></span> · <button class="source-btn" onclick="window.location.href='source directory.html'">Source directory</button></footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const car = document.getElementById('random-car');
+    if (!car) return;
+
+    // 1. Zufällige Höhe berechnen (zwischen 10% und 90% der Bildschirmhöhe)
+    const randomY = Math.random() * 80 + 10;
+    car.style.top = randomY + '%';
+
+    // 2. Zufällige Geschwindigkeit berechnen (Dauer der Fahrt zwischen 3 und 6 Sekunden)
+    const randomDuration = Math.random() * 3 + 3;
+    car.style.transitionDuration = randomDuration + 's';
+
+    // 3. Zufällige Fahrtrichtung festlegen (50% Chance für links oder rechts)
+    const driveRight = Math.random() > 0.5;
+
+    // 4. Animation kurz nach dem Laden starten
+    setTimeout(() => {
+        if (driveRight) {
+            car.classList.add('drive-right');
+        } else {
+            // Für Fahrt nach links müssen wir die Startposition anpassen
+            car.style.left = 'auto';
+            car.style.right = '-200px';
+            // Eine kleine Verzögerung, damit der Browser die neue Startposition registriert
+            requestAnimationFrame(() => {
+                car.classList.add('drive-left');
+            });
+        }
+    }, 500); // Startet 0.5 Sekunden nach dem Laden
+});
+</script>
+</body>
+</html>

@@ -8,26 +8,37 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
-
+<div id="random-car">🏎️</div>
   <nav>
   <a class="nav-logo" href="index.html">✦ My Portfolio</a>
 
   <div class="nav-links">
     <a href="index.html">Home</a>
-    <a href="Entry-1.html"class="active">Entry 1</a>
+    <a href="Entry-1.html" class="active">Entry 1</a>
     <a href="Entry-2.html">Entry 2</a>
     <a href="Entry-3.html">Entry 3</a>
     <a href="Entry-4.html">Entry 4</a>
     <a href="Entry-5.html">Entry 5</a>
     <a href="Entry-6.html">Entry 6</a>
+    <a href="Entry-7.html">Entry 7</a>
+    <a href="Entry-8.html">Entry 8</a>
+    <a href="Entry-9.html">Entry 9</a>
   </div>
 </nav>
 
   <div class="entry-page">
+    <div class="nav-row">
     <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+    <button class="back-btn" onclick="window.location.href='Entry-2.html'">Entry 2 →</button>
+    </div>
     <div class="entry-label">Entry #1</div>
     <h1 class="entry-title">Summer Updates</h1>
     <p class="entry-subtitle">Three highlights from my summer, plus one lowlight — and how I dealt with it.</p>
+    <div class="dest-tags">
+      <span class="tag">🇧🇪 Belgium</span>
+      <span class="tag">🇭🇺 Budapest</span>
+      <span class="tag">🇳🇱 Netherlands</span>
+    </div>
     <hr class="divider"/>
 
     <h2 class="accent1">✦ Three Highlights</h2>
@@ -35,34 +46,34 @@
     <div class="highlight-grid">
       <div class="highlight-card">
         <div class="highlight-img-placeholder">
-          <img src="Budapest.png" alt="Summer Highlights">
+          <img src="Belgien.png" alt="Belgium flea market">
         </div>
         <div class="highlight-body">
           <div class="highlight-num">Highlight 1</div>
-          <div class="highlight-title">Your Title Here</div>
-          <div class="highlight-text">Write about your first highlight here. What happened? Why was it special? How did it make you feel?</div>
+          <div class="highlight-title">Belgium</div>
+          <div class="highlight-text">We went to the flea market, bought some stuff and enjoyed the view there. The food was really tasty, but it was difficult to find a good restaurant where 8 people could sit together.</div>
         </div>
       </div>
 
       <div class="highlight-card">
         <div class="highlight-img-placeholder">
-          <img src="Budapest.png" alt="Summer Highlights">
+          <img src="Budapest.png" alt="Budapest baths">
         </div>
         <div class="highlight-body">
           <div class="highlight-num">Highlight 2</div>
-          <div class="highlight-title">Your Title Here</div>
-          <div class="highlight-text">Write about your second highlight here. Describe where you were, who you were with, and what made it memorable.</div>
+          <div class="highlight-title">Budapest</div>
+          <div class="highlight-text">We also went to Széchenyi baths and pool, which was nice — it's really pretty and the place was relaxing since it wasn't crowded. We also visited some memorable places in Budapest, which looked beautiful at night.</div>
         </div>
       </div>
 
       <div class="highlight-card">
         <div class="highlight-img-placeholder">
-          <img src="Budapest.png" alt="Summer Highlights">
+          <img src="Niederlande.png" alt="Netherlands architecture">
         </div>
         <div class="highlight-body">
           <div class="highlight-num">Highlight 3</div>
-          <div class="highlight-title">Your Title Here</div>
-          <div class="highlight-text">Write about your third highlight here. What did you learn or take away from this experience?</div>
+          <div class="highlight-title">Netherlands</div>
+          <div class="highlight-text">The architecture was incredibly designed. I also liked the food — for example the honey waffles you could buy in every store. I was shocked when I saw the parking prices there; they're doing this to make driving less attractive.</div>
         </div>
       </div>
     </div>
@@ -73,31 +84,53 @@
 
     <div class="lowlight-box">
       <div class="label">Lowlight</div>
-      <h3>Your Lowlight Title Here</h3>
-      <p>Describe your summer lowlight here. What went wrong? How did it affect you? Be honest — this is your personal reflection. You don't need to share anything too private, just something that wasn't ideal about your summer.</p>
+      <h3>Travelling</h3>
+      <p>The lowlight of that summer holiday was that, while travelling by car, we got a scratch on our rental van because we had to park in a parking building. But I'd say we learned something from that accident: never stress about a parking spot that goes down.</p>
     </div>
 
     <div class="solution-box">
       <div class="solution-icon">💡</div>
       <div>
         <strong>My Solution</strong>
-        <p>Explain how you dealt with this lowlight, or what you would do differently next time. What did you learn from the experience?</p>
+        <p>Our solution was that we had insurance and just had to pay CHF 500. Next time we'll check the hotel parking before we drive in.</p>
       </div>
     </div>
   </div>
-</div>
-<footer>My Portfolio · <span id="year"></span></footer>
+
+<footer>My Portfolio · <span id="year"></span> · <button class="source-btn" onclick="window.location.href='source directory.html'">Source directory</button></footer>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  function showPage(id) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-    const navEl = document.getElementById('nav-' + id);
-    if (navEl) navEl.classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+  window.addEventListener('DOMContentLoaded', () => {
+    const car = document.getElementById('random-car');
+    if (!car) return;
+
+    // 1. Zufällige Höhe berechnen (zwischen 10% und 90% der Bildschirmhöhe)
+    const randomY = Math.random() * 80 + 10;
+    car.style.top = randomY + '%';
+
+    // 2. Zufällige Geschwindigkeit berechnen (Dauer der Fahrt zwischen 3 und 6 Sekunden)
+    const randomDuration = Math.random() * 3 + 3;
+    car.style.transitionDuration = randomDuration + 's';
+
+    // 3. Zufällige Fahrtrichtung festlegen (50% Chance für links oder rechts)
+    const driveRight = Math.random() > 0.5;
+
+    // 4. Animation kurz nach dem Laden starten
+    setTimeout(() => {
+        if (driveRight) {
+            car.classList.add('drive-right');
+        } else {
+            // Für Fahrt nach links müssen wir die Startposition anpassen
+            car.style.left = 'auto';
+            car.style.right = '-200px';
+            // Eine kleine Verzögerung, damit der Browser die neue Startposition registriert
+            requestAnimationFrame(() => {
+                car.classList.add('drive-left');
+            });
+        }
+    }, 500); // Startet 0.5 Sekunden nach dem Laden
+});
 </script>
 </body>
 </html>

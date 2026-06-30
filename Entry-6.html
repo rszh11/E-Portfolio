@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Entry 1 - Summer Updates</title>
+  <title>Entry 6 - Social Media Ban in AUS</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
-
+<div id="random-car">📵</div>
   <nav>
   <a class="nav-logo" href="index.html">✦ My Portfolio</a>
 
@@ -19,70 +19,102 @@
     <a href="Entry-3.html">Entry 3</a>
     <a href="Entry-4.html">Entry 4</a>
     <a href="Entry-5.html">Entry 5</a>
-    <a href="Entry-6.html"class="active">Entry 6</a>
+    <a href="Entry-6.html" class="active">Entry 6</a>
+    <a href="Entry-7.html">Entry 7</a>
+    <a href="Entry-8.html">Entry 8</a>
+    <a href="Entry-9.html">Entry 9</a>
   </div>
 </nav>
 
   <div class="entry-page">
+    <div class="nav-row">
     <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+    <button class="back-btn" onclick="window.location.href='Entry-7.html'">Entry 7 →</button>
+    </div>
     <div class="entry-label">Entry #6</div>
     <h1 class="entry-title">Social Media Ban in Australia</h1>
     <p class="entry-subtitle">Reflections on the BBC article about Australia's social media ban for under-16s.</p>
     <hr class="divider"/>
 
+    <div class="entry-hero-frame">
+      <img src="Australia.png" alt="Australia social media ban">
+    </div>
+
     <div class="qa-item">
       <div class="qa-question">What change in behaviour did 14-year-old Amy describe after the social media ban?</div>
-      <div class="qa-answer">Write your answer here based on the BBC article. What did Amy say changed in her daily life after the ban was introduced?</div>
+      <div class="qa-answer">Amy explained that after the ban, her daily habits changed a lot. Instead of spending hours scrolling on her phone and looking at screens, she started spending more time doing offline activities. She felt less pressure from social media trends and felt more connected to the real world.</div>
     </div>
 
     <div class="qa-item">
       <div class="qa-question">What reasons did the Australian government give for introducing the ban on under-16s using social media?</div>
-      <div class="qa-answer">Write your answer here. Summarise the main arguments the government made in their own words.</div>
+      <div class="qa-answer">The government introduced the ban to protect young people from online dangers. Their main reasons were preventing cyberbullying, protecting kids from online predators, and reducing the bad effects of social media algorithms on teenagers' mental health, like depression.</div>
     </div>
 
     <div class="qa-item">
-      <div class="qa-question">How does teenager Aahil's experience differ from Amy's?</div>
-      <div class="qa-answer">Write your answer here. Compare the two teenagers — what is different about their reactions or situations?</div>
+      <div class="qa-question">How does the teenager Aahil's experience differ from Amy's?</div>
+      <div class="qa-answer">While Amy had a positive experience and found healthy offline habits, Aahil felt lonely. For him, social media was a tool to stay in touch with friends and find communities with similar hobbies. The ban made him feel cut off from his friends.</div>
     </div>
 
     <div class="qa-item">
       <div class="qa-question">What are some ways young people have tried to continue accessing social media despite the ban?</div>
-      <div class="qa-answer">Write your answer here. What workarounds did the article mention?</div>
+      <div class="qa-answer">Many teenagers found workarounds immediately. Some used VPNs (Virtual Private Networks) to hide their location, others simply lied about their age when signing up, and some even used tricks like drawing on fake moustaches to fool selfie age-verification scanners.</div>
     </div>
 
     <hr class="divider"/>
 
     <div class="content-block">
-      <h3>💬 My Opinion</h3>
+      <h3>My Opinion</h3>
       <div class="qa-item" style="margin:0">
-        <div class="qa-question">Do you think the ban will help teenagers develop healthier offline habits?</div>
-        <div class="qa-answer">Write your personal opinion here with reasons. Do you think it will actually work?</div>
+        <div class="qa-question">Do you think the ban will help teenagers develop healthier offline habits? Why or why not?</div>
+        <div class="qa-answer">Yes, I think it will help. When you don't have the option to check notifications all day, you're forced to find other things to do. Teenagers will automatically spend more time on hobbies, sports, or hanging out with friends in real life, which is much healthier.</div>
       </div>
       <br/>
       <div class="qa-item" style="margin:0">
         <div class="qa-question">Do you agree with the government's approach? What alternatives could be considered?</div>
-        <div class="qa-answer">Write your opinion here. If not a full ban, what else could governments or parents do?</div>
+        <div class="qa-answer">I fully agree with the government's approach. Forcing tech companies to take responsibility is a great idea because online addiction is a real problem. An alternative could be better education about screen time in schools, but a hard legal ban is much more effective.</div>
       </div>
       <br/>
       <div class="qa-item" style="margin:0">
         <div class="qa-question">Would such a ban be a good thing in Switzerland?</div>
-        <div class="qa-answer">Write your opinion here. Would the same approach work in Switzerland? Why or why not?</div>
+        <div class="qa-answer">I think a similar ban would be a great idea for Switzerland too. Swiss teenagers spend way too much time on TikTok and Instagram, and a ban would help everyone focus more on school and real-life social skills.</div>
       </div>
     </div>
   </div>
-</div>
-<footer>My Portfolio · <span id="year"></span></footer>
+
+<footer>My Portfolio · <span id="year"></span> · <button class="source-btn" onclick="window.location.href='source directory.html'">Source directory</button></footer>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  function showPage(id) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-    const navEl = document.getElementById('nav-' + id);
-    if (navEl) navEl.classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+  window.addEventListener('DOMContentLoaded', () => {
+    const car = document.getElementById('random-car');
+    if (!car) return;
+
+    // 1. Zufällige Höhe berechnen (zwischen 10% und 90% der Bildschirmhöhe)
+    const randomY = Math.random() * 80 + 10;
+    car.style.top = randomY + '%';
+
+    // 2. Zufällige Geschwindigkeit berechnen (Dauer der Fahrt zwischen 3 und 6 Sekunden)
+    const randomDuration = Math.random() * 3 + 3;
+    car.style.transitionDuration = randomDuration + 's';
+
+    // 3. Zufällige Fahrtrichtung festlegen (50% Chance für links oder rechts)
+    const driveRight = Math.random() > 0.5;
+
+    // 4. Animation kurz nach dem Laden starten
+    setTimeout(() => {
+        if (driveRight) {
+            car.classList.add('drive-right');
+        } else {
+            // Für Fahrt nach links müssen wir die Startposition anpassen
+            car.style.left = 'auto';
+            car.style.right = '-200px';
+            // Eine kleine Verzögerung, damit der Browser die neue Startposition registriert
+            requestAnimationFrame(() => {
+                car.classList.add('drive-left');
+            });
+        }
+    }, 500); // Startet 0.5 Sekunden nach dem Laden
+});
 </script>
 </body>
 </html>

@@ -7,7 +7,6 @@
       --accent2: #d4980e;
       --text: #1a1a1a;
       --muted: #000000;
-      --nav: #ffffff;
       --radius: 16px;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -22,7 +21,7 @@
     /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: #523602;
+      background: #825c14;
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
       display: flex; align-items: center; justify-content: space-between;
@@ -35,7 +34,7 @@
     }
     .nav-links { display: flex; gap: 8px; }
     .nav-links a {
-      color: var(--nav); text-decoration: none; font-size: 0.82rem;
+      color: var(--muted); text-decoration: none; font-size: 0.82rem;
       padding: 6px 14px; border-radius: 20px; transition: all 0.2s;
       letter-spacing: 0.03em; font-weight: 500;
     }
@@ -198,7 +197,7 @@
 
     /* LOWLIGHT */
     .lowlight-box {
-      background: #523602;
+      background: #896115;
       border: 1px solid #4a1a1a; border-radius: 12px; padding: 24px; margin-top: 24px;
     }
     .lowlight-box .label {
@@ -225,7 +224,6 @@
       border-radius: 12px; padding: 24px; margin-bottom: 16px;
     }
     .content-block h3 {
-      font-family: 'Playfair Display', serif;
       font-size: 1.15rem; margin-bottom: 10px; color: var(--accent);
     }
     .content-block p {
@@ -298,22 +296,7 @@
       .interview-item { grid-template-columns: 1fr; }
     }
 
-    /* CANCELLED BADGE */
-    .cancelled-badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: #2a1a1a; border: 1px solid #4a2a2a;
-      color: #c97e7e; font-size: 0.75rem; letter-spacing: 0.08em;
-      text-transform: uppercase; padding: 5px 14px; border-radius: 20px;
-      margin-bottom: 20px;
-    }
-    .strikethrough { text-decoration: line-through; opacity: 0.5; }
-    .cancelled-note {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 12px; padding: 24px; text-align: center;
-      color: var(--muted); font-size: 0.9rem;
-    }
-    .cancelled-note .big { font-size: 2.5rem; margin-bottom: 12px; }
-
+   
     /* TAGS */
     .tag {
       display: inline-block; background: rgba(232,201,126,0.1);
@@ -362,4 +345,218 @@
   align-items: center;
   justify-content: center;
   background-color: #f0f0f0; /* grauer Hintergrund, falls Bild fehlt */
+}
+
+.nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.entry-content { max-width: 720px; margin: 0 auto; padding: 40px; }
+
+.section-label {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 20px; margin-top: 40px;
+  }
+  .section-label:first-child { margin-top: 0; }
+  .section-label .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+  .section-label h2 { font-family: 'DM Serif Display', serif; font-size: 1.35rem; }
+  .section-label .badge {
+    margin-left: auto; background: var(--accent-light); color: var(--accent);
+    font-size: 0.68rem; font-weight: 500; padding: 3px 10px; border-radius: 100px;
+    letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap;
+  }
+
+  .music-item {
+    display: flex; gap: 16px; padding: 16px; background: var(--white);
+    border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px;
+    align-items: flex-start;
+  }
+
+  .music-rank {
+    font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: var(--border);
+    min-width: 36px; text-align: center; line-height: 1;
+  }
+  .music-info { flex: 1; }
+  .music-info strong { display: block; font-size: 0.92rem; margin-bottom: 3px; }
+  .music-info span { font-size: 0.8rem; color: var(--muted); }
+
+
+  /* ===== ENTRY 7 — PREDICTIONS ===== */
+.prediction-grid { display: grid; gap: 16px; margin: 24px 0; }
+.prediction-card {
+  background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 22px; display: flex; gap: 16px; align-items: flex-start;
+  transition: border-color .2s, transform .2s;
+}
+.prediction-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.prediction-icon { font-size: 1.8rem; flex-shrink: 0; line-height: 1; }
+.prediction-card h3 {font-size: 1.05rem; margin-bottom: 6px; color: var(--text); }
+.prediction-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.75; }
+
+.reflection-box {
+  background: linear-gradient(135deg, #896115, #5e3f0d);
+  border-radius: 12px; padding: 26px; margin-top: 28px; color: #fff;
+}
+.reflection-box .label { font-size: 0.7rem; letter-spacing: .12em; text-transform: uppercase; opacity: .85; margin-bottom: 8px; font-weight: 600; }
+.reflection-box p { font-size: 0.92rem; line-height: 1.8; }
+
+/* ===== ENTRY 8 — MURDER MYSTERY ===== */
+.suspect-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin: 20px 0 28px; }
+.suspect-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 14px; text-align: center; transition: border-color .2s; }
+.suspect-card:hover { border-color: var(--accent); }
+.suspect-avatar {
+  width: 54px; height: 54px; border-radius: 50%; background: var(--surface);
+  border: 1px solid var(--border); display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; margin: 0 auto 10px;
+}
+.suspect-name { font-weight: 600; font-size: 0.85rem; margin-bottom: 4px; }
+.suspect-alibi { font-size: 0.76rem; color: var(--muted); line-height: 1.55; }
+
+.reveal-box { background: #3a1414; border: 1px solid #6b1f1f; border-radius: 12px; padding: 24px; margin-top: 12px; }
+.reveal-box .label { font-size: 0.7rem; letter-spacing: .12em; text-transform: uppercase; color: #ff9d9d; margin-bottom: 8px; font-weight: 600; }
+.reveal-box p { font-size: 0.9rem; line-height: 1.8; color: #f3dcdc; }
+.reveal-box strong { color: #ffb3b3; }
+
+/* ===== ENTRY 9 — FREESTYLE ===== */
+.entry-hero-img { width: 100%; max-height: 320px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); display: block; margin: 8px 0 28px; }
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 24px 0; }
+.compare-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; }
+.compare-card .era { font-size: 0.7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; font-weight: 600; }
+.compare-card h3 {font-size: 1.1rem; margin-bottom: 10px; }
+.compare-card p { font-size: 0.86rem; color: var(--muted); line-height: 1.75; }
+@media (max-width: 680px) { .compare-grid { grid-template-columns: 1fr; } }
+
+/* ===== HOME — CONTINUOUS SCROLL ===== */
+.portfolio-scroll { max-width: 1000px; margin: 0 auto; padding: 0 40px 60px; }
+.entry-section { margin-bottom: 56px; scroll-margin-top: 90px; }
+.entry-section-bar {
+  display: flex; align-items: center; gap: 14px; margin-bottom: 14px;
+  padding-bottom: 10px; border-bottom: 1px solid var(--border);
+}
+.entry-section-num {font-size: 1.3rem; color: var(--accent); font-weight: 700; }
+.entry-section-title { font-size: 0.95rem; font-weight: 600; color: var(--text); flex: 1; }
+.entry-section-link {
+  font-size: 0.76rem; color: var(--accent); text-decoration: none;
+  border: 1px solid var(--border); padding: 5px 12px; border-radius: 20px; transition: .2s; white-space: nowrap;
+}
+.entry-section-link:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.entry-frame { width: 100%; border: 1px solid var(--border); border-radius: var(--radius); display: block; background: var(--surface); min-height: 300px; }
+@media (max-width: 680px) {
+  .portfolio-scroll { padding: 0 20px 40px; }
+  .entry-section-title { font-size: 0.85rem; }
+}
+
+/* ===== SOURCE DIRECTORY ===== */
+.source-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; margin: 24px 0 40px; }
+.source-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.source-thumb { width: 100%; height: 140px; object-fit: cover; display: block; background: var(--surface); }
+.source-info { padding: 14px; }
+.source-info .used-in { font-size: 0.66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; font-weight: 600; }
+.source-info .filename { font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; word-break: break-all; }
+.source-info .src-line { font-size: 0.78rem; color: var(--muted); }
+.source-info .src-line a { color: var(--accent); }
+
+
+/* ===== ENTRY 1 — SUMMER UPDATES ===== */
+.highlight-img-placeholder img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.entry-page h2.accent1, .entry-page h2.accent2 {
+  font-family: 'Playfair Display', serif; font-size: 1.3rem; margin: 32px 0 16px;
+  display: flex; align-items: center; gap: 10px;
+}
+.entry-page h2.accent1 { color: var(--accent); }
+.entry-page h2.accent2 { color: #e2734a; }
+.dest-tags { margin: 14px 0 4px; }
+
+/* ===== ENTRY 2 — IDIOMS ===== */
+.idiom-head { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.idiom-num {
+  width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: #fff;
+  display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif;
+  font-weight: 700; flex-shrink: 0; font-size: 0.95rem;
+}
+.idiom-head h3 { margin-bottom: 0; }
+.idiom-detail { margin-top: 10px; }
+.idiom-detail-label {
+  display: block; font-size: 0.7rem; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 4px;
+}
+.idiom-detail p { font-size: 0.88rem; color: var(--muted); line-height: 1.75; margin: 0; }
+
+/* ===== ENTRY 4 — STORY (cancelled note) ===== */
+.entry-title.strikethrough {
+  text-decoration: line-through; text-decoration-color: var(--accent);
+  text-decoration-thickness: 3px; opacity: .55;
+}
+.cancelled-note {
+  background: var(--card); border: 2px dashed var(--border); border-radius: 12px;
+  padding: 32px; position: relative; overflow: hidden;
+}
+.cancelled-note .big { font-size: 2.6rem; margin-bottom: 14px; opacity: .75; }
+.cancelled-note p { font-size: 0.92rem; color: var(--muted); line-height: 1.85; }
+.cancelled-note::before {
+  content: 'MEMORY FILE'; position: absolute; top: 18px; right: -38px;
+  background: var(--accent); color: #fff; font-size: 0.62rem; font-weight: 700;
+  letter-spacing: .1em; padding: 4px 44px; transform: rotate(35deg);
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
+}
+
+/* ===== ENTRY 5 — MUSIC hover ===== */
+.music-item { transition: transform .2s, border-color .2s; }
+.music-item:hover { transform: translateX(4px); border-color: var(--accent); }
+
+/* ===== HERO IMAGE — CONTAIN VARIANT (for non-banner images) ===== */
+.entry-hero-frame {
+  width: 100%; max-height: 280px; border-radius: var(--radius);
+  border: 1px solid var(--border); background: var(--card);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; margin: 8px 0 28px; padding: 20px;
+}
+.entry-hero-frame img { max-width: 100%; max-height: 240px; object-fit: contain; display: block; }
+
+/* ===== FOOTER — SOURCE DIRECTORY AS BUTTON (showPage-style nav) ===== */
+.source-btn {
+  background: none; border: none; font-family: inherit; cursor: pointer;
+  color: var(--accent); font-size: 0.78rem; padding: 0;
+}
+.source-btn:hover { text-decoration: underline; }
+
+
+#confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Klicks gehen durch das Canvas durch */
+    z-index: 9999;        /* Immer ganz oben */
+}
+
+
+#random-car {
+    position: fixed;
+    /* Startet weit außerhalb des Bildschirms */
+    left: -200px;
+    /* Eine zufällige Höhe wird per JavaScript gesetzt */
+    top: 50%; 
+    font-size: 4rem; /* Größe des Autos */
+    z-index: 9998; /* Hinter dem Banner, aber vor dem Inhalt */
+    pointer-events: none; /* Klicks gehen durch */
+    
+    /* Die Animation wird per JS aktiviert */
+    transition: transform 0s linear;
+}
+
+/* Klasse für die Fahrt nach RECHTS */
+#random-car.drive-right {
+    transform: translateX(calc(100vw + 400px));
+}
+
+/* Klasse für die Fahrt nach LINKS */
+#random-car.drive-left {
+    /* Startposition für Fahrt nach links muss rechts sein */
+    left: auto;
+    right: -200px;
+    transform: translateX(calc(-100vw - 400px)) scaleX(-1); /* Fährt nach links und wird gespiegelt */
 }
